@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1d1d20;
 }
 
 @theme inline {
@@ -14,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #1d1d20;
     --foreground: #ededed;
   }
 }
@@ -22,5 +23,42 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Remove arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Neon green styled scrollbar for dropdowns */
+/* Neon green styled scrollbar for dropdowns */
+.dropdown-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-track {
+  background: #111827; /* Tailwind gray-900 */
+  border-radius: 8px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(8, 255, 140, 0.6); /* neon green */
+  border-radius: 8px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(8, 255, 140, 0.9); /* brighter on hover */
+}
+
+/* Firefox support */
+.dropdown-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(8, 255, 140, 0.6) #111827;
 }
